@@ -152,15 +152,6 @@
                   >linkedin.com/in/bharath-thappeta</a
                 >
               </div>
-              <div>
-                <span class="meta-label">GitHub</span>
-                <a
-                  href="https://github.com/your-handle"
-                  target="_blank"
-                  rel="noreferrer"
-                  >github.com/your-handle</a
-                >
-              </div>
             </div>
           </div>
         </div>
@@ -276,136 +267,122 @@
         <div class="section-heading reveal">
           <div>
             <p class="eyebrow">Architecture</p>
-            <h2>Elegant systems diagrams, built for clarity.</h2>
+            <h2>How the systems operate.</h2>
+            <p class="section-subtitle">
+              A calm, high-signal view of the flows that power each platform.
+            </p>
           </div>
         </div>
 
-        <div class="architecture-grid">
-          <article class="diagram-card reveal">
-            <div class="diagram-heading">
+        <div class="architecture-stack">
+          <article class="architecture-panel reveal">
+            <div class="architecture-header">
               <h3>ES Bot</h3>
               <p>
                 Production investigations, repository knowledge, and issue
                 workflows.
               </p>
             </div>
-            <svg
-              viewBox="0 0 620 320"
-              role="img"
-              aria-label="ES Bot architecture diagram"
-            >
-              <rect
-                x="40"
-                y="70"
-                width="140"
-                height="70"
-                rx="16"
-                class="diagram-node"
-              />
-              <text x="110" y="108" text-anchor="middle" class="diagram-label">
-                Developer
-              </text>
-              <rect
-                x="240"
-                y="70"
-                width="140"
-                height="70"
-                rx="16"
-                class="diagram-node"
-              />
-              <text x="310" y="108" text-anchor="middle" class="diagram-label">
-                ES Bot
-              </text>
-              <rect
-                x="440"
-                y="70"
-                width="140"
-                height="70"
-                rx="16"
-                class="diagram-node"
-              />
-              <text x="510" y="108" text-anchor="middle" class="diagram-label">
-                GitHub
-              </text>
-              <rect
-                x="240"
-                y="210"
-                width="140"
-                height="70"
-                rx="16"
-                class="diagram-node"
-              />
-              <text x="310" y="248" text-anchor="middle" class="diagram-label">
-                Kafka / MongoDB
-              </text>
-              <path d="M180 105 H240" class="diagram-flow" />
-              <path d="M380 105 H440" class="diagram-flow" />
-              <path d="M310 140 V210" class="diagram-flow" />
-              <circle cx="310" cy="175" r="7" class="diagram-dot" />
-            </svg>
+            <div class="pipeline" aria-label="ES Bot architecture pipeline">
+              <div class="pipeline-track">
+                <div class="pipeline-card reveal highlight">
+                  <span class="pipeline-step">01</span>
+                  <strong>Signal intake</strong>
+                  <p>Incident context, logs, and repository evidence arrive.</p>
+                </div>
+                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                  <path d="M0 8H54" />
+                  <path d="M48 2L62 8L48 14" />
+                </svg>
+                <div class="pipeline-card reveal">
+                  <span class="pipeline-step">02</span>
+                  <strong>Investigation</strong>
+                  <p>Root cause analysis is assembled from live systems.</p>
+                </div>
+                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                  <path d="M0 8H54" />
+                  <path d="M48 2L62 8L48 14" />
+                </svg>
+                <div class="pipeline-card reveal">
+                  <span class="pipeline-step">03</span>
+                  <strong>Knowledge sync</strong>
+                  <p>Repository context and issue history are connected.</p>
+                </div>
+                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                  <path d="M0 8H54" />
+                  <path d="M48 2L62 8L48 14" />
+                </svg>
+                <div class="pipeline-card reveal">
+                  <span class="pipeline-step">04</span>
+                  <strong>Actionability</strong>
+                  <p>Guidance is packaged for engineering teams.</p>
+                </div>
+                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                  <path d="M0 8H54" />
+                  <path d="M48 2L62 8L48 14" />
+                </svg>
+                <div class="pipeline-card reveal">
+                  <span class="pipeline-step">05</span>
+                  <strong>Delivery</strong>
+                  <p>Teams receive focused next steps and follow-up support.</p>
+                </div>
+              </div>
+            </div>
           </article>
 
-          <article class="diagram-card reveal">
-            <div class="diagram-heading">
+          <article class="architecture-panel reveal">
+            <div class="architecture-header">
               <h3>SpringBoard</h3>
               <p>
                 Repository lifecycle automation and engineering workflow
                 orchestration.
               </p>
             </div>
-            <svg
-              viewBox="0 0 620 320"
-              role="img"
-              aria-label="SpringBoard architecture diagram"
-            >
-              <rect
-                x="50"
-                y="70"
-                width="140"
-                height="70"
-                rx="16"
-                class="diagram-node"
-              />
-              <text x="120" y="108" text-anchor="middle" class="diagram-label">
-                Repo
-              </text>
-              <rect
-                x="240"
-                y="70"
-                width="140"
-                height="70"
-                rx="16"
-                class="diagram-node"
-              />
-              <text x="310" y="108" text-anchor="middle" class="diagram-label">
-                SpringBoard
-              </text>
-              <rect
-                x="430"
-                y="70"
-                width="140"
-                height="70"
-                rx="16"
-                class="diagram-node"
-              />
-              <text x="500" y="108" text-anchor="middle" class="diagram-label">
-                CI / CD
-              </text>
-              <rect
-                x="240"
-                y="210"
-                width="140"
-                height="70"
-                rx="16"
-                class="diagram-node"
-              />
-              <text x="310" y="248" text-anchor="middle" class="diagram-label">
-                Observability
-              </text>
-              <path d="M190 105 H240" class="diagram-flow" />
-              <path d="M380 105 H430" class="diagram-flow" />
-              <path d="M310 140 V210" class="diagram-flow" />
-            </svg>
+            <div class="pipeline" aria-label="SpringBoard architecture pipeline">
+              <div class="pipeline-track">
+                <div class="pipeline-card reveal highlight">
+                  <span class="pipeline-step">01</span>
+                  <strong>Repository intake</strong>
+                  <p>New repositories enter a standardized lifecycle path.</p>
+                </div>
+                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                  <path d="M0 8H54" />
+                  <path d="M48 2L62 8L48 14" />
+                </svg>
+                <div class="pipeline-card reveal">
+                  <span class="pipeline-step">02</span>
+                  <strong>Workflow setup</strong>
+                  <p>CI, review, and delivery conventions are applied.</p>
+                </div>
+                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                  <path d="M0 8H54" />
+                  <path d="M48 2L62 8L48 14" />
+                </svg>
+                <div class="pipeline-card reveal">
+                  <span class="pipeline-step">03</span>
+                  <strong>Automation</strong>
+                  <p>Routine tasks are orchestrated across repositories.</p>
+                </div>
+                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                  <path d="M0 8H54" />
+                  <path d="M48 2L62 8L48 14" />
+                </svg>
+                <div class="pipeline-card reveal">
+                  <span class="pipeline-step">04</span>
+                  <strong>Observability</strong>
+                  <p>Execution and adoption are monitored continuously.</p>
+                </div>
+                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                  <path d="M0 8H54" />
+                  <path d="M48 2L62 8L48 14" />
+                </svg>
+                <div class="pipeline-card reveal">
+                  <span class="pipeline-step">05</span>
+                  <strong>Scale-out</strong>
+                  <p>The pattern becomes reusable for the wider engineering org.</p>
+                </div>
+              </div>
+            </div>
           </article>
         </div>
       </section>
