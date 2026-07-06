@@ -522,7 +522,7 @@ a:focus-visible {
 }
 
 .pipeline-chip.primary {
-  background: linear-gradient(135deg, #f8c987 0%, #ee9b45 100%);
+  background: linear-gradient(135deg, #f8d8ae 0%, #ee9b45 100%);
   color: #2e1d0b;
   border-color: rgba(61, 38, 15, 0.14);
 }
