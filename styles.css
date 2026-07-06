@@ -464,7 +464,11 @@ a:focus-visible {
 
 .architecture-panel {
   padding: 1.6rem;
-  background: linear-gradient(180deg, rgba(255, 253, 250, 0.95), rgba(248, 242, 232, 0.95));
+  background: linear-gradient(
+    180deg,
+    rgba(255, 253, 250, 0.95),
+    rgba(248, 242, 232, 0.95)
+  );
 }
 
 .architecture-header {
@@ -492,7 +496,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  min-width: 860px;
+  min-width: 1120px;
   padding: 0.35rem 0;
 }
 
@@ -502,14 +506,17 @@ a:focus-visible {
   padding: 1rem 0.95rem;
   border-radius: 1.05rem;
   border: 1px solid rgba(20, 18, 13, 0.08);
-  background: var(--surface);
+  background: linear-gradient(180deg, var(--surface), rgba(237, 242, 251, 0.75));
   box-shadow: 0 10px 24px rgba(20, 18, 13, 0.04);
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
   transform: translateX(-16px);
   opacity: 0;
-  transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 240ms ease, background-color 240ms ease;
+  transition:
+    transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 240ms ease,
+    background-color 240ms ease;
 }
 
 .pipeline-card.reveal.is-visible {
@@ -522,6 +529,19 @@ a:focus-visible {
   color: #2e1d0b;
   border-color: rgba(61, 38, 15, 0.14);
   box-shadow: 0 14px 30px rgba(238, 155, 69, 0.2);
+}
+
+.pipeline-card strong {
+  display: block;
+  font-size: 0.98rem;
+  font-family: var(--font-heading);
+}
+
+.pipeline-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
 }
 
 .pipeline-card.highlight p,

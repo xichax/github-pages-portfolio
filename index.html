@@ -279,52 +279,68 @@
             <div class="architecture-header">
               <h3>ES Bot</h3>
               <p>
-                Production investigations, repository knowledge, and issue
-                workflows.
+                Autonomous investigation for operational questions across logs,
+                data, APIs, and repository context.
               </p>
             </div>
             <div class="pipeline" aria-label="ES Bot architecture pipeline">
               <div class="pipeline-track">
-                <div class="pipeline-card reveal highlight">
+                <div class="pipeline-card reveal">
                   <span class="pipeline-step">01</span>
-                  <strong>Signal intake</strong>
-                  <p>Incident context, logs, and repository evidence arrive.</p>
+                  <strong>Question</strong>
+                  <p>An incident or support request enters the workflow.</p>
                 </div>
-                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                <svg
+                  class="pipeline-arrow reveal"
+                  viewBox="0 0 64 16"
+                  aria-hidden="true"
+                >
                   <path d="M0 8H54" />
                   <path d="M48 2L62 8L48 14" />
                 </svg>
-                <div class="pipeline-card reveal">
+                <div class="pipeline-card reveal highlight">
                   <span class="pipeline-step">02</span>
-                  <strong>Investigation</strong>
-                  <p>Root cause analysis is assembled from live systems.</p>
+                  <strong>AI agent</strong>
+                  <p>The agent interprets the request and prepares the path.</p>
                 </div>
-                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                <svg
+                  class="pipeline-arrow reveal"
+                  viewBox="0 0 64 16"
+                  aria-hidden="true"
+                >
                   <path d="M0 8H54" />
                   <path d="M48 2L62 8L48 14" />
                 </svg>
                 <div class="pipeline-card reveal">
                   <span class="pipeline-step">03</span>
-                  <strong>Knowledge sync</strong>
-                  <p>Repository context and issue history are connected.</p>
+                  <strong>Gather context</strong>
+                  <p>Logs, data, APIs, and evidence are collected.</p>
                 </div>
-                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                <svg
+                  class="pipeline-arrow reveal"
+                  viewBox="0 0 64 16"
+                  aria-hidden="true"
+                >
                   <path d="M0 8H54" />
                   <path d="M48 2L62 8L48 14" />
                 </svg>
                 <div class="pipeline-card reveal">
                   <span class="pipeline-step">04</span>
-                  <strong>Actionability</strong>
-                  <p>Guidance is packaged for engineering teams.</p>
+                  <strong>Correlate &amp; reason</strong>
+                  <p>Signals are connected to isolate root cause and patterns.</p>
                 </div>
-                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                <svg
+                  class="pipeline-arrow reveal"
+                  viewBox="0 0 64 16"
+                  aria-hidden="true"
+                >
                   <path d="M0 8H54" />
                   <path d="M48 2L62 8L48 14" />
                 </svg>
                 <div class="pipeline-card reveal">
                   <span class="pipeline-step">05</span>
-                  <strong>Delivery</strong>
-                  <p>Teams receive focused next steps and follow-up support.</p>
+                  <strong>Answer findings</strong>
+                  <p>Clear findings and next steps are returned to the team.</p>
                 </div>
               </div>
             </div>
@@ -334,52 +350,84 @@
             <div class="architecture-header">
               <h3>SpringBoard</h3>
               <p>
-                Repository lifecycle automation and engineering workflow
-                orchestration.
+                A control plane that upgrades a fleet of services safely — one
+                reviewed change at a time.
               </p>
             </div>
-            <div class="pipeline" aria-label="SpringBoard architecture pipeline">
+            <div
+              class="pipeline"
+              aria-label="SpringBoard architecture pipeline"
+            >
               <div class="pipeline-track">
-                <div class="pipeline-card reveal highlight">
+                <div class="pipeline-card reveal">
                   <span class="pipeline-step">01</span>
-                  <strong>Repository intake</strong>
-                  <p>New repositories enter a standardized lifecycle path.</p>
+                  <strong>Onboard profile</strong>
+                  <p>Service context and upgrade needs are captured.</p>
                 </div>
-                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                <svg
+                  class="pipeline-arrow reveal"
+                  viewBox="0 0 64 16"
+                  aria-hidden="true"
+                >
                   <path d="M0 8H54" />
                   <path d="M48 2L62 8L48 14" />
                 </svg>
-                <div class="pipeline-card reveal">
+                <div class="pipeline-card reveal highlight">
                   <span class="pipeline-step">02</span>
-                  <strong>Workflow setup</strong>
-                  <p>CI, review, and delivery conventions are applied.</p>
+                  <strong>Reference run</strong>
+                  <p>The safest known path is established for the rollout.</p>
                 </div>
-                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                <svg
+                  class="pipeline-arrow reveal"
+                  viewBox="0 0 64 16"
+                  aria-hidden="true"
+                >
                   <path d="M0 8H54" />
                   <path d="M48 2L62 8L48 14" />
                 </svg>
                 <div class="pipeline-card reveal">
                   <span class="pipeline-step">03</span>
-                  <strong>Automation</strong>
-                  <p>Routine tasks are orchestrated across repositories.</p>
+                  <strong>Hardest case</strong>
+                  <p>Edge cases are tested to strengthen the playbook.</p>
                 </div>
-                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                <svg
+                  class="pipeline-arrow reveal"
+                  viewBox="0 0 64 16"
+                  aria-hidden="true"
+                >
                   <path d="M0 8H54" />
                   <path d="M48 2L62 8L48 14" />
                 </svg>
                 <div class="pipeline-card reveal">
                   <span class="pipeline-step">04</span>
-                  <strong>Observability</strong>
-                  <p>Execution and adoption are monitored continuously.</p>
+                  <strong>Distill recipe</strong>
+                  <p>A reusable upgrade pattern is reduced to a clear recipe.</p>
                 </div>
-                <svg class="pipeline-arrow reveal" viewBox="0 0 64 16" aria-hidden="true">
+                <svg
+                  class="pipeline-arrow reveal"
+                  viewBox="0 0 64 16"
+                  aria-hidden="true"
+                >
                   <path d="M0 8H54" />
                   <path d="M48 2L62 8L48 14" />
                 </svg>
                 <div class="pipeline-card reveal">
                   <span class="pipeline-step">05</span>
-                  <strong>Scale-out</strong>
-                  <p>The pattern becomes reusable for the wider engineering org.</p>
+                  <strong>Fan-out across fleet</strong>
+                  <p>The pattern is applied across the organization.</p>
+                </div>
+                <svg
+                  class="pipeline-arrow reveal"
+                  viewBox="0 0 64 16"
+                  aria-hidden="true"
+                >
+                  <path d="M0 8H54" />
+                  <path d="M48 2L62 8L48 14" />
+                </svg>
+                <div class="pipeline-card reveal">
+                  <span class="pipeline-step">06</span>
+                  <strong>Reviewed PRs per service</strong>
+                  <p>Each service receives a reviewed, safe change.</p>
                 </div>
               </div>
             </div>
