@@ -382,6 +382,15 @@ a:focus-visible {
   color: var(--muted);
 }
 
+.about-note {
+  padding: 0.8rem 0.95rem;
+  border-left: 2px solid var(--accent);
+  border-radius: 0.6rem;
+  background: color-mix(in srgb, var(--accent-soft) 60%, transparent);
+  color: var(--text);
+  font-weight: 600;
+}
+
 .meta-list {
   display: grid;
   gap: 0.8rem;
@@ -551,14 +560,19 @@ a:focus-visible {
 }
 
 .flow-step.accent {
-  background: linear-gradient(135deg, var(--accent-soft), color-mix(in srgb, var(--accent) 18%, var(--surface)));
+  background: linear-gradient(
+    135deg,
+    var(--accent-soft),
+    color-mix(in srgb, var(--accent) 18%, var(--surface))
+  );
   color: var(--accent-strong);
   border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
 }
 
 .flow-step.accent .flow-dot {
   background: var(--accent-strong);
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-strong) 16%, transparent);
+  box-shadow: 0 0 0 4px
+    color-mix(in srgb, var(--accent-strong) 16%, transparent);
 }
 
 .flow-label {
