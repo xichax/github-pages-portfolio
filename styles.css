@@ -382,15 +382,6 @@ a:focus-visible {
   color: var(--muted);
 }
 
-.about-note {
-  padding: 0.8rem 0.95rem;
-  border-left: 2px solid var(--accent);
-  border-radius: 0.6rem;
-  background: color-mix(in srgb, var(--accent-soft) 60%, transparent);
-  color: var(--text);
-  font-weight: 600;
-}
-
 .meta-list {
   display: grid;
   gap: 0.8rem;
