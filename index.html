@@ -281,64 +281,16 @@
               <p>Autonomous investigation for operational questions.</p>
             </div>
             <div class="pipeline" aria-label="ES Bot architecture pipeline">
-              <div class="pipeline-track">
-                <div class="pipeline-card reveal">
-                  <span class="pipeline-step">01</span>
-                  <strong>Question / Request</strong>
-                  <p>An operational question enters the workflow.</p>
-                </div>
-                <svg
-                  class="pipeline-arrow reveal"
-                  viewBox="0 0 64 16"
-                  aria-hidden="true"
-                >
-                  <path d="M0 8H54" />
-                  <path d="M48 2L62 8L48 14" />
-                </svg>
-                <div class="pipeline-card reveal highlight">
-                  <span class="pipeline-step">02</span>
-                  <strong>AI Agent</strong>
-                  <p>The agent prepares the investigation path.</p>
-                </div>
-                <svg
-                  class="pipeline-arrow reveal"
-                  viewBox="0 0 64 16"
-                  aria-hidden="true"
-                >
-                  <path d="M0 8H54" />
-                  <path d="M48 2L62 8L48 14" />
-                </svg>
-                <div class="pipeline-card reveal">
-                  <span class="pipeline-step">03</span>
-                  <strong>Gather Signals</strong>
-                  <p>Logs, data, and APIs are gathered.</p>
-                </div>
-                <svg
-                  class="pipeline-arrow reveal"
-                  viewBox="0 0 64 16"
-                  aria-hidden="true"
-                >
-                  <path d="M0 8H54" />
-                  <path d="M48 2L62 8L48 14" />
-                </svg>
-                <div class="pipeline-card reveal">
-                  <span class="pipeline-step">04</span>
-                  <strong>Correlate &amp; Reason</strong>
-                  <p>Signals are connected to surface root cause.</p>
-                </div>
-                <svg
-                  class="pipeline-arrow reveal"
-                  viewBox="0 0 64 16"
-                  aria-hidden="true"
-                >
-                  <path d="M0 8H54" />
-                  <path d="M48 2L62 8L48 14" />
-                </svg>
-                <div class="pipeline-card reveal">
-                  <span class="pipeline-step">05</span>
-                  <strong>Answer Findings</strong>
-                  <p>Clear findings are returned to the team.</p>
-                </div>
+              <div class="pipeline-track compact">
+                <div class="pipeline-chip reveal">Question</div>
+                <span class="pipeline-arrow-simple reveal">→</span>
+                <div class="pipeline-chip reveal primary">AI Agent</div>
+                <span class="pipeline-arrow-simple reveal">→</span>
+                <div class="pipeline-chip reveal">Gather Signals</div>
+                <span class="pipeline-arrow-simple reveal">→</span>
+                <div class="pipeline-chip reveal">Reason</div>
+                <span class="pipeline-arrow-simple reveal">→</span>
+                <div class="pipeline-chip reveal">Answer Findings</div>
               </div>
             </div>
           </article>
@@ -352,77 +304,18 @@
               class="pipeline"
               aria-label="SpringBoard architecture pipeline"
             >
-              <div class="pipeline-track">
-                <div class="pipeline-card reveal">
-                  <span class="pipeline-step">01</span>
-                  <strong>Onboard Profile</strong>
-                  <p>Service context is captured.</p>
-                </div>
-                <svg
-                  class="pipeline-arrow reveal"
-                  viewBox="0 0 64 16"
-                  aria-hidden="true"
-                >
-                  <path d="M0 8H54" />
-                  <path d="M48 2L62 8L48 14" />
-                </svg>
-                <div class="pipeline-card reveal highlight">
-                  <span class="pipeline-step">02</span>
-                  <strong>Reference Run</strong>
-                  <p>The safest upgrade path is established.</p>
-                </div>
-                <svg
-                  class="pipeline-arrow reveal"
-                  viewBox="0 0 64 16"
-                  aria-hidden="true"
-                >
-                  <path d="M0 8H54" />
-                  <path d="M48 2L62 8L48 14" />
-                </svg>
-                <div class="pipeline-card reveal">
-                  <span class="pipeline-step">03</span>
-                  <strong>Hardest Case</strong>
-                  <p>Edge cases are tested and hardened.</p>
-                </div>
-                <svg
-                  class="pipeline-arrow reveal"
-                  viewBox="0 0 64 16"
-                  aria-hidden="true"
-                >
-                  <path d="M0 8H54" />
-                  <path d="M48 2L62 8L48 14" />
-                </svg>
-                <div class="pipeline-card reveal">
-                  <span class="pipeline-step">04</span>
-                  <strong>Distill Recipe</strong>
-                  <p>The pattern becomes reusable.</p>
-                </div>
-                <svg
-                  class="pipeline-arrow reveal"
-                  viewBox="0 0 64 16"
-                  aria-hidden="true"
-                >
-                  <path d="M0 8H54" />
-                  <path d="M48 2L62 8L48 14" />
-                </svg>
-                <div class="pipeline-card reveal">
-                  <span class="pipeline-step">05</span>
-                  <strong>Fan-out Across Fleet</strong>
-                  <p>The pattern scales across services.</p>
-                </div>
-                <svg
-                  class="pipeline-arrow reveal"
-                  viewBox="0 0 64 16"
-                  aria-hidden="true"
-                >
-                  <path d="M0 8H54" />
-                  <path d="M48 2L62 8L48 14" />
-                </svg>
-                <div class="pipeline-card reveal">
-                  <span class="pipeline-step">06</span>
-                  <strong>Reviewed PRs Per Service</strong>
-                  <p>Each service gets a reviewed change.</p>
-                </div>
+              <div class="pipeline-track compact">
+                <div class="pipeline-chip reveal">Onboard</div>
+                <span class="pipeline-arrow-simple reveal">→</span>
+                <div class="pipeline-chip reveal primary">Reference</div>
+                <span class="pipeline-arrow-simple reveal">→</span>
+                <div class="pipeline-chip reveal">Hardest Case</div>
+                <span class="pipeline-arrow-simple reveal">→</span>
+                <div class="pipeline-chip reveal">Recipe</div>
+                <span class="pipeline-arrow-simple reveal">→</span>
+                <div class="pipeline-chip reveal">Fan-out</div>
+                <span class="pipeline-arrow-simple reveal">→</span>
+                <div class="pipeline-chip reveal">Reviewed PRs</div>
               </div>
             </div>
           </article>
