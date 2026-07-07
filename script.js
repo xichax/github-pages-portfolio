@@ -1,71 +1,92 @@
-const storageKey = "portfolio-theme"
-const themeToggle = document.getElementById("themeToggle")
 const root = document.documentElement
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-
-const themes = ["light", "dark", "nord", "sepia", "rose", "forest"]
-let currentTheme =
-  localStorage.getItem(storageKey) || (prefersDark ? "dark" : "light")
+const themeButtons = document.querySelectorAll(".theme-dot")
+const savedTheme = localStorage.getItem("portfolio-theme")
+const systemPrefersDark = window.matchMedia(
+  "(prefers-color-scheme: dark)",
+).matches
+const initialTheme = savedTheme || (systemPrefersDark ? "dark" : "light")
 
 function applyTheme(theme) {
-  document.body.setAttribute("data-theme", theme)
-  currentTheme = theme
-  localStorage.setItem(storageKey, theme)
+  root.setAttribute("data-theme", theme)
+  themeButtons.forEach((button) => {
+    button.classList.toggle("is-active", button.dataset.themeOption === theme)
+  })
+  localStorage.setItem("portfolio-theme", theme)
 }
 
-function cycleTheme() {
-  const index = themes.indexOf(currentTheme)
-  const nextTheme = themes[(index + 1) % themes.length]
-  applyTheme(nextTheme)
+applyTheme(initialTheme)
+
+themeButtons.forEach((button) => {
+  button.addEventListener("click", () => applyTheme(button.dataset.themeOption))
+})
+
+const revealItems = document.querySelectorAll(".reveal")
+const prefersReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches
+
+if (prefersReducedMotion) {
+  revealItems.forEach((item) => item.classList.add("is-visible"))
+} else {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible")
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -40px 0px",
+    },
+  )
+
+  revealItems.forEach((item) => revealObserver.observe(item))
 }
 
-applyTheme(currentTheme)
+const counters = document.querySelectorAll(".stat-number")
 
-themeToggle?.addEventListener("click", cycleTheme)
+function animateCounter(counter) {
+  if (counter.dataset.animated === "true") {
+    return
+  }
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible")
-        observer.unobserve(entry.target)
-      }
-    })
-  },
-  { threshold: 0.18 },
-)
+  counter.dataset.animated = "true"
+  const target = Number(counter.dataset.target || 0)
+  const suffix = counter.dataset.suffix || ""
+  const startTime = performance.now()
+  const duration = 1400
 
-document
-  .querySelectorAll(".reveal")
-  .forEach((element) => observer.observe(element))
+  const step = (currentTime) => {
+    const progress = Math.min((currentTime - startTime) / duration, 1)
+    const eased = 1 - Math.pow(1 - progress, 3)
+    const value = Math.round(target * eased)
+    counter.textContent = `${value}${suffix}`
 
-const counters = document.querySelectorAll("[data-counter]")
-const counterObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return
+    if (progress < 1) {
+      requestAnimationFrame(step)
+    } else {
+      counter.textContent = `${target}${suffix}`
+    }
+  }
 
-      const target = entry.target
-      const value = Number(target.getAttribute("data-counter"))
-      const suffix = target.textContent.includes("+") ? "+" : ""
-      const duration = 900
-      const startTime = performance.now()
+  requestAnimationFrame(step)
+}
 
-      const tick = (now) => {
-        const progress = Math.min((now - startTime) / duration, 1)
-        const eased = 1 - Math.pow(1 - progress, 3)
-        const nextValue = Math.round(eased * value)
-        target.textContent = `${nextValue}${suffix}`
-        if (progress < 1) requestAnimationFrame(tick)
-      }
+if (!prefersReducedMotion) {
+  const counterObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target)
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.6 },
+  )
 
-      requestAnimationFrame(tick)
-      counterObserver.unobserve(target)
-    })
-  },
-  { threshold: 0.6 },
-)
-
-counters.forEach((counter) => counterObserver.observe(counter))
-
-document.getElementById("year").textContent = new Date().getFullYear()
+  counters.forEach((counter) => counterObserver.observe(counter))
+}

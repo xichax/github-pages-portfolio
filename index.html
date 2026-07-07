@@ -1,26 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Bharath Thappeta — Backend Engineer portfolio focused on distributed systems, platform engineering, and reliable software architecture."
+      content="Bharath Thappeta is a backend engineer building scalable distributed systems, event-driven platforms, and developer tooling."
     />
     <title>Bharath Thappeta | Backend Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Fraunces:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260707" />
   </head>
-  <body data-theme="light">
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Go to top of page"
-        >Bharath Thappeta</a
-      >
+      <a class="brand" href="#top" aria-label="Go to top">BT</a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -28,293 +28,495 @@
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button
-        class="theme-toggle"
-        id="themeToggle"
-        aria-label="Toggle color theme"
-      >
-        ◐
-      </button>
+      <div class="header-actions">
+        <div class="theme-switcher" role="toolbar" aria-label="Theme selector">
+          <button
+            class="theme-dot is-active"
+            data-theme-option="light"
+            aria-label="Light theme"
+          ></button>
+          <button
+            class="theme-dot"
+            data-theme-option="dark"
+            aria-label="Dark theme"
+          ></button>
+          <button
+            class="theme-dot"
+            data-theme-option="nord"
+            aria-label="Nord theme"
+          ></button>
+          <button
+            class="theme-dot"
+            data-theme-option="sepia"
+            aria-label="Sepia theme"
+          ></button>
+          <button
+            class="theme-dot"
+            data-theme-option="rose"
+            aria-label="Rose theme"
+          ></button>
+          <button
+            class="theme-dot"
+            data-theme-option="forest"
+            aria-label="Forest theme"
+          ></button>
+        </div>
+        <a class="pill-link" href="#contact">Contact</a>
+      </div>
     </header>
 
-    <main id="top">
-      <section class="hero section">
+    <main id="content">
+      <section class="hero section" id="top">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Backend Engineer • Hyderabad, India</p>
+          <p class="eyebrow">Backend Engineer · Hyderabad, India</p>
           <h1>Building scalable distributed systems with calm precision.</h1>
-          <p class="lead">
+          <p class="hero-text">
             I design reliable backend platforms, event-driven services, and
-            developer tooling that hold up under real production pressure.
+            developer tooling grounded in production experience and system
+            thinking.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#projects">View Projects</a>
+            <a class="button button-primary" href="#projects">View Projects</a>
+            <a class="button button-secondary" href="#contact">Contact</a>
             <a
-              class="button secondary"
+              class="button button-secondary"
               href="bharath_resume.pdf"
               download="bharath_resume.pdf"
               >Download Resume</a
             >
           </div>
-          <div class="availability">
-            <span class="dot"></span>
-            <span>Open to opportunities</span>
-          </div>
-        </div>
-        <div class="hero-panel reveal" aria-label="Engineering focus summary">
-          <p class="panel-label">Core Focus</p>
-          <ul>
-            <li>Distributed systems</li>
-            <li>Microservices and APIs</li>
-            <li>Kafka and event pipelines</li>
-            <li>Platform engineering</li>
-            <li>CI/CD and reliability</li>
+          <ul class="hero-highlights" aria-label="Highlights">
+            <li>3+ years</li>
+            <li>80+ microservices</li>
+            <li>Open to opportunities</li>
           </ul>
+        </div>
+
+        <div class="hero-panel reveal" aria-label="Current focus card">
+          <div class="panel-card">
+            <p class="small-label">Current focus</p>
+            <ul class="stack-list">
+              <li>Distributed systems</li>
+              <li>Java and Spring Boot</li>
+              <li>Kafka and event pipelines</li>
+              <li>Platform engineering</li>
+            </ul>
+            <p class="panel-foot">
+              I enjoy turning messy production systems into dependable platforms
+              that teams can trust.
+            </p>
+          </div>
         </div>
       </section>
 
       <section class="section" id="about">
         <div class="section-heading reveal">
-          <p class="eyebrow">About</p>
-          <h2>
-            Backend systems that are durable, intentional, and easy to operate.
-          </h2>
+          <div>
+            <p class="eyebrow">About</p>
+            <h2>Serious systems, thoughtful implementation.</h2>
+          </div>
         </div>
+
         <div class="about-grid">
-          <p class="reveal">
-            I’m a backend engineer with 3 years of experience building
-            production systems using Java, Spring Boot, Kafka, MongoDB,
-            Elasticsearch, and Azure. My work spans microservices, developer
-            productivity platforms, event-driven workflows, and reliability
-            improvements for high-scale internal services.
-          </p>
-          <p class="reveal">
-            I care deeply about architecture clarity, operational quality, and
-            reducing friction for teams that depend on the systems I build.
-          </p>
+          <div class="about-copy reveal">
+            <p>
+              Backend Engineer with 3 years of experience designing scalable
+              distributed systems using Java, Spring Boot, Kafka, MongoDB, and
+              Azure.
+            </p>
+            <p>
+              My work spans microservices, event-driven architecture, production
+              debugging, CI/CD automation, containerized workloads, and
+              developer productivity platforms.
+            </p>
+            <p>
+              I care about reliability, clean interfaces, and reducing
+              unnecessary complexity so teams can move quickly without
+              sacrificing quality.
+            </p>
+            <p>Graduated from NIT Warangal in 2023.</p>
+          </div>
+
+          <div class="about-card reveal">
+            <p class="small-label">Snapshot</p>
+            <div class="meta-list">
+              <div>
+                <span class="meta-label">Email</span>
+                <a href="mailto:bharath.thappeta.work@gmail.com"
+                  >bharath.thappeta.work@gmail.com</a
+                >
+              </div>
+              <div>
+                <span class="meta-label">Phone</span>
+                <a href="tel:+919515093043">+91 95150 93043</a>
+              </div>
+              <div>
+                <span class="meta-label">LinkedIn</span>
+                <a
+                  href="https://linkedin.com/in/bharath-thappeta"
+                  target="_blank"
+                  rel="noreferrer"
+                  >linkedin.com/in/bharath-thappeta</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="section" id="experience">
         <div class="section-heading reveal">
-          <p class="eyebrow">Experience</p>
-          <h2>Tata Consultancy Services</h2>
-        </div>
-        <div class="experience-card reveal">
-          <div class="job-meta">
-            <h3>Backend Engineer</h3>
-            <p>September 2023 – Present</p>
+          <div>
+            <p class="eyebrow">Experience</p>
+            <h2>Building in production at scale.</h2>
           </div>
-          <ul>
-            <li>
-              Contributed to a distributed retail platform spanning 80+
-              microservices.
-            </li>
-            <li>Designed and maintained Spring Boot services and REST APIs.</li>
-            <li>
-              Built Kafka-driven event pipelines and integrated MongoDB and
-              Elasticsearch.
-            </li>
-            <li>
-              Improved CI/CD workflows with GitHub Actions and Gradle, and built
-              Testcontainers-based integration testing.
-            </li>
-            <li>
-              Worked on production debugging, containerized job execution, and
-              observability with Dynatrace.
-            </li>
-          </ul>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-head">
+              <h3>Tata Consultancy Services</h3>
+              <span>Sep 2023 – Present</span>
+            </div>
+            <p class="role">Backend Engineer</p>
+            <ul>
+              <li>
+                Contributed to a distributed retail platform with 80+
+                microservices.
+              </li>
+              <li>
+                Designed and maintained Spring Boot microservices and
+                Kafka-driven pipelines.
+              </li>
+              <li>
+                Integrated MongoDB and Elasticsearch for resilient data access
+                patterns.
+              </li>
+              <li>
+                Improved CI/CD flows through GitHub Actions, Gradle,
+                Testcontainers, and Dynatrace.
+              </li>
+              <li>
+                Built containerized job execution systems for long-running and
+                retry-driven workloads.
+              </li>
+            </ul>
+          </article>
         </div>
       </section>
 
       <section class="section" id="projects">
         <div class="section-heading reveal">
-          <p class="eyebrow">Featured Work</p>
-          <h2>
-            Systems thinking, thoughtful implementation, and measurable impact.
-          </h2>
+          <div>
+            <p class="eyebrow">Featured Projects</p>
+            <h2>Systems that compress complexity.</h2>
+          </div>
         </div>
 
-        <article class="project-card reveal">
-          <div class="project-copy">
-            <div class="project-title-row">
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-header">
+              <p class="eyebrow">Featured · Internal platform</p>
               <h3>ES Bot</h3>
-              <span class="pill">Featured</span>
+              <span class="badge">Adopted internally</span>
             </div>
             <p>
-              An AI-assisted engineering support platform that automates
-              production investigation workflows, supports GitHub Copilot-based
-              reasoning, and helps teams inspect logs, Kafka topics, MongoDB
-              diagnostics, and repository knowledge. The solution has been
-              adopted internally and presented to architects and engineering
-              leadership.
+              An AI-assisted engineering support platform for production
+              investigations, GitHub Copilot workflows, log analysis, Kafka
+              inspection, MongoDB diagnostics, and root cause analysis.
             </p>
             <ul>
-              <li>Production investigation automation</li>
-              <li>GitHub issue workflows</li>
-              <li>Repository knowledge automation</li>
-              <li>Root cause analysis support</li>
+              <li>Automates incident investigation workflows</li>
+              <li>Connects repository knowledge and issue tracking</li>
+              <li>Presented to architects and engineering leadership</li>
             </ul>
-          </div>
-          <div
-            class="diagram-wrap"
-            aria-label="Architecture diagram for ES Bot"
-          >
-            <svg viewBox="0 0 520 260" class="diagram" role="img">
-              <rect x="30" y="70" width="120" height="60" rx="10" />
-              <rect x="200" y="70" width="120" height="60" rx="10" />
-              <rect x="370" y="70" width="120" height="60" rx="10" />
-              <rect x="200" y="170" width="120" height="60" rx="10" />
-              <path d="M150 100 H200" />
-              <path d="M320 100 H370" />
-              <path d="M260 130 V170" />
-              <circle cx="260" cy="100" r="12" />
-              <text x="90" y="105">User</text>
-              <text x="220" y="105">ES Bot</text>
-              <text x="390" y="105">Systems</text>
-              <text x="215" y="205">Knowledge</text>
-            </svg>
-          </div>
-        </article>
+          </article>
 
-        <article class="project-card reveal">
-          <div class="project-copy">
-            <div class="project-title-row">
+          <article class="project-card reveal">
+            <div class="project-header">
+              <p class="eyebrow">Featured · Internal platform</p>
               <h3>SpringBoard</h3>
-              <span class="pill">Featured</span>
+              <span class="badge">Developer productivity</span>
             </div>
             <p>
-              An internal engineering platform that standardizes the development
-              lifecycle across repositories. It reduces manual effort, improves
-              developer productivity, and streamlines workflow orchestration
-              from repo intake to release readiness.
+              An internal engineering platform that automates the software
+              development lifecycle across repositories, standardizing workflows
+              and reducing manual effort.
             </p>
             <ul>
-              <li>Automated SDLC workflows</li>
-              <li>Repository lifecycle orchestration</li>
-              <li>Standardized engineering practices</li>
-              <li>Faster delivery with less overhead</li>
+              <li>Standardizes engineering workflows</li>
+              <li>Improves developer productivity across repositories</li>
+              <li>Streamlines lifecycle management and review practices</li>
             </ul>
-          </div>
-          <div
-            class="diagram-wrap"
-            aria-label="Architecture diagram for SpringBoard"
-          >
-            <svg viewBox="0 0 520 260" class="diagram" role="img">
-              <rect x="40" y="70" width="120" height="60" rx="10" />
-              <rect x="200" y="70" width="120" height="60" rx="10" />
-              <rect x="360" y="70" width="120" height="60" rx="10" />
-              <rect x="200" y="170" width="120" height="60" rx="10" />
-              <path d="M160 100 H200" />
-              <path d="M320 100 H360" />
-              <path d="M260 130 V170" />
-              <circle cx="260" cy="100" r="12" />
-              <text x="60" y="105">Repo</text>
-              <text x="220" y="105">SpringBoard</text>
-              <text x="380" y="105">Release</text>
-              <text x="222" y="205">Governance</text>
-            </svg>
-          </div>
-        </article>
+          </article>
 
-        <article class="project-card compact reveal">
-          <div class="project-copy">
-            <div class="project-title-row">
+          <article class="project-card reveal">
+            <div class="project-header">
+              <p class="eyebrow">Platform work</p>
               <h3>Job Orchestration Platform</h3>
+              <span class="badge">Containerized execution</span>
             </div>
             <p>
-              Containerized workload execution infrastructure for long-running
-              jobs, retries, fault tolerance, and isolated background
-              processing.
+              A containerized workload execution platform for long-running jobs,
+              retry handling, fault tolerance, background processing, and
+              container isolation.
+            </p>
+            <ul>
+              <li>Supports resilient long-running jobs</li>
+              <li>Handles retries and failure recovery</li>
+              <li>Separates execution environments cleanly</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="architecture">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Architecture</p>
+            <h2>How the systems operate.</h2>
+            <p class="section-subtitle">
+              A calm, high-signal view of the flows that power each platform.
             </p>
           </div>
-        </article>
+        </div>
+
+        <div class="architecture-stack">
+          <article class="architecture-panel reveal">
+            <div class="architecture-header">
+              <h3>ES Bot</h3>
+              <p>Autonomous investigation for operational questions.</p>
+            </div>
+            <div
+              class="architecture-flow"
+              aria-label="ES Bot architecture flow"
+            >
+              <div class="flow-step reveal">
+                <span class="flow-dot"></span>
+                <div class="flow-copy">
+                  <span class="flow-label">01 · Intake</span>
+                  <strong>Question</strong>
+                </div>
+              </div>
+              <div class="flow-step reveal accent">
+                <span class="flow-dot"></span>
+                <div class="flow-copy">
+                  <span class="flow-label">02 · Core</span>
+                  <strong>AI Agent</strong>
+                </div>
+              </div>
+              <div class="flow-step reveal">
+                <span class="flow-dot"></span>
+                <div class="flow-copy">
+                  <span class="flow-label">03 · Context</span>
+                  <strong>Gather Signals</strong>
+                </div>
+              </div>
+              <div class="flow-step reveal">
+                <span class="flow-dot"></span>
+                <div class="flow-copy">
+                  <span class="flow-label">04 · Mindset</span>
+                  <strong>Reason</strong>
+                </div>
+              </div>
+              <div class="flow-step reveal">
+                <span class="flow-dot"></span>
+                <div class="flow-copy">
+                  <span class="flow-label">05 · Output</span>
+                  <strong>Answer</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="architecture-panel reveal">
+            <div class="architecture-header">
+              <h3>SpringBoard</h3>
+              <p>A control plane that upgrades services safely.</p>
+            </div>
+            <div
+              class="architecture-flow"
+              aria-label="SpringBoard architecture flow"
+            >
+              <div class="flow-step reveal">
+                <span class="flow-dot"></span>
+                <div class="flow-copy">
+                  <span class="flow-label">01 · Start</span>
+                  <strong>Onboard</strong>
+                </div>
+              </div>
+              <div class="flow-step reveal accent">
+                <span class="flow-dot"></span>
+                <div class="flow-copy">
+                  <span class="flow-label">02 · Guide</span>
+                  <strong>Reference</strong>
+                </div>
+              </div>
+              <div class="flow-step reveal">
+                <span class="flow-dot"></span>
+                <div class="flow-copy">
+                  <span class="flow-label">03 · Pressure</span>
+                  <strong>Hard Case</strong>
+                </div>
+              </div>
+              <div class="flow-step reveal">
+                <span class="flow-dot"></span>
+                <div class="flow-copy">
+                  <span class="flow-label">04 · Playbook</span>
+                  <strong>Recipe</strong>
+                </div>
+              </div>
+              <div class="flow-step reveal">
+                <span class="flow-dot"></span>
+                <div class="flow-copy">
+                  <span class="flow-label">05 · Expand</span>
+                  <strong>Fan-out</strong>
+                </div>
+              </div>
+              <div class="flow-step reveal">
+                <span class="flow-dot"></span>
+                <div class="flow-copy">
+                  <span class="flow-label">06 · Merge</span>
+                  <strong>PRs</strong>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="section" id="skills">
         <div class="section-heading reveal">
-          <p class="eyebrow">Skills</p>
-          <h2>Tools and systems that make the work reliable.</h2>
+          <div>
+            <p class="eyebrow">Skills</p>
+            <h2>Core strengths across the backend stack.</h2>
+          </div>
         </div>
-        <div class="skills-grid reveal">
-          <div>
-            <h3>Languages</h3>
-            <p>Java, SQL</p>
+
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3>Backend Engineering</h3>
+            <ul>
+              <li>Java</li>
+              <li>Python (Automation &amp; Scripting)</li>
+              <li>SQL</li>
+              <li>Spring Boot</li>
+              <li>Spring Batch</li>
+              <li>REST APIs</li>
+              <li>Microservices</li>
+            </ul>
           </div>
-          <div>
-            <h3>Frameworks</h3>
-            <p>Spring Boot, Spring Batch, REST APIs, Microservices</p>
+          <div class="skill-group reveal">
+            <h3>Distributed Systems</h3>
+            <ul>
+              <li>Apache Kafka</li>
+              <li>MongoDB</li>
+              <li>Elasticsearch</li>
+              <li>Event-Driven Architecture</li>
+              <li>Asynchronous Messaging</li>
+            </ul>
           </div>
-          <div>
-            <h3>Messaging</h3>
-            <p>Kafka</p>
+          <div class="skill-group reveal">
+            <h3>Cloud &amp; Platform</h3>
+            <ul>
+              <li>Microsoft Azure</li>
+              <li>Azure Blob Storage</li>
+              <li>Kubernetes (AKS)</li>
+              <li>Helm</li>
+              <li>Docker</li>
+              <li>Podman</li>
+            </ul>
           </div>
-          <div>
-            <h3>Data</h3>
-            <p>MongoDB, Elasticsearch</p>
+          <div class="skill-group reveal">
+            <h3>DevOps &amp; CI/CD</h3>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>GitHub Actions</li>
+              <li>Gradle</li>
+              <li>CI/CD Pipelines</li>
+              <li>SDLC Automation</li>
+            </ul>
           </div>
-          <div>
-            <h3>Cloud</h3>
-            <p>Azure, Azure Blob Storage</p>
+          <div class="skill-group reveal">
+            <h3>Testing &amp; Quality</h3>
+            <ul>
+              <li>JUnit</li>
+              <li>Testcontainers</li>
+              <li>Integration Testing</li>
+              <li>API Testing</li>
+            </ul>
           </div>
-          <div>
-            <h3>DevOps</h3>
-            <p>Docker, Podman, GitHub Actions, Gradle</p>
+          <div class="skill-group reveal">
+            <h3>Observability &amp; Production</h3>
+            <ul>
+              <li>Dynatrace</li>
+              <li>Log Analysis</li>
+              <li>Root Cause Analysis</li>
+              <li>Production Debugging</li>
+              <li>Performance Monitoring</li>
+            </ul>
           </div>
-          <div>
-            <h3>Testing</h3>
-            <p>JUnit, Testcontainers</p>
-          </div>
-          <div>
-            <h3>Monitoring</h3>
-            <p>Dynatrace</p>
+          <div class="skill-group reveal">
+            <h3>AI Engineering</h3>
+            <ul>
+              <li>GitHub Copilot</li>
+              <li>GitHub Copilot Agents</li>
+              <li>AI Workflow Automation</li>
+              <li>Prompt Engineering</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section class="section stats-section">
+      <section class="section" id="stats">
         <div class="section-heading reveal">
-          <p class="eyebrow">Impact</p>
-          <h2>Focused on systems that scale and teams that move faster.</h2>
+          <div>
+            <p class="eyebrow">Statistics</p>
+            <h2>Depth measured in systems, not slogans.</h2>
+          </div>
         </div>
+
         <div class="stats-grid">
-          <div class="stat reveal">
-            <strong data-counter="3">0</strong>
+          <article class="stat-card reveal">
+            <p class="stat-number" data-target="3" data-suffix="+">0</p>
             <span>Years Experience</span>
-          </div>
-          <div class="stat reveal">
-            <strong data-counter="80">0</strong>
+          </article>
+          <article class="stat-card reveal">
+            <p class="stat-number" data-target="80" data-suffix="+">0</p>
             <span>Microservices</span>
-          </div>
-          <div class="stat reveal">
-            <strong data-counter="10">0</strong>
+          </article>
+          <article class="stat-card reveal">
+            <p class="stat-number" data-target="10">0</p>
             <span>Core Services</span>
-          </div>
-          <div class="stat reveal">
-            <strong data-counter="40">0</strong>
+          </article>
+          <article class="stat-card reveal">
+            <p class="stat-number" data-target="40" data-suffix="%">0</p>
             <span>CI/CD Improvement</span>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section class="section contact-section" id="contact">
+      <section class="section" id="contact">
         <div class="contact-card reveal">
           <p class="eyebrow">Contact</p>
-          <h2>Interested in building serious backend systems?</h2>
+          <h2>Open to high-impact backend roles.</h2>
           <p>
-            Reach out for collaboration, opportunities, or a thoughtful
-            conversation about platform engineering.
+            If you are building reliable platforms, developer tools, or
+            mission-critical systems, I would be glad to connect.
           </p>
           <div class="contact-actions">
             <a
-              class="button primary"
+              class="button button-primary"
               href="mailto:bharath.thappeta.work@gmail.com"
-              >Email Me</a
+              >Email Bharath</a
             >
             <a
-              class="button secondary"
-              href="bharath_resume.pdf"
-              download="bharath_resume.pdf"
-              >Download Resume</a
+              class="button button-secondary"
+              href="https://linkedin.com/in/bharath-thappeta"
+              target="_blank"
+              rel="noreferrer"
+              >LinkedIn</a
             >
           </div>
         </div>
@@ -322,12 +524,9 @@
     </main>
 
     <footer class="site-footer">
-      <p>
-        © <span id="year"></span> Bharath Thappeta. Built for thoughtful
-        engineers.
-      </p>
+      <p>© 2026 Bharath Thappeta. Crafted for thoughtful engineering teams.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260707"></script>
   </body>
 </html>
